@@ -10,7 +10,7 @@ import android.provider.BaseColumns;
 public class TodoListContrat {
     public static final String CONTENT_AUTORITHY = "edu.galileo.todolist";
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTORITHY);
-    private static final String PATH_TODO = "todo";
+    public static final String PATH_TODO = "todo";
 
     public static final class TodoEntry implements BaseColumns{
         public static final String TABLE_NAME = "todo";

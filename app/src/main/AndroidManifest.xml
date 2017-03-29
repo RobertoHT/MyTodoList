@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:authorities="edu.galileo.todolist"
+            android:name=".data.TodoListProvider"
+            android:exported="false"/>
     </application>
 
 </manifest>
