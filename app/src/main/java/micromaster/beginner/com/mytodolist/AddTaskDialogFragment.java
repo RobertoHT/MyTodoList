@@ -3,9 +3,12 @@ package micromaster.beginner.com.mytodolist;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
+
+import micromaster.beginner.com.mytodolist.service.TodoListService;
 
 /**
  * Created by praxis on 28/03/17.
@@ -28,7 +31,9 @@ public class AddTaskDialogFragment extends DialogFragment {
         builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                Intent intent = new Intent(getContext(), TodoListService.class);
+                intent.putExtra(TodoListService.EXTRA_TASK_DESCRIPTION, "");
+                getActivity().startService(intent);
             }
         }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override

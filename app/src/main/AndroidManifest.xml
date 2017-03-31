@@ -20,6 +20,9 @@
             android:authorities="edu.galileo.todolist"
             android:name=".data.TodoListProvider"
             android:exported="false"/>
+        <service
+            android:name=".service.TodoListService"
+            android:exported="false" />
     </application>
 
 </manifest>
